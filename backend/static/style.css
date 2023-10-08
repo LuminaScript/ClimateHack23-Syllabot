@@ -13,35 +13,47 @@ body {
   height: 100vh;
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 400px; /* Set a maximum height for the container */
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+  width: 100%;
+  margin: 20px;
+}
+
 .search-container {
   text-align: center;
   margin-bottom: 30px;
+  top: 0;
 }
 
 .search-bar{
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 10px solid #4c70af;
+  border-radius: 20px;
+}
+
+.overlap-group-2 {
+  font-family: 'Young Serif', serif;
 }
 
 #user_input {
-  height: 60px;
+  height: 70px;
   width: 400px;
-  font-size: 18px;
-  margin-right: 10px;
-  it
+  font-size: 18px;  
 }
 
 .course-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
-    background-color: #f7f7f7;  /* Light gray background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;  /* Or whatever width you prefer */
-    margin: 20px auto;
+  
 }
 
 .course {
@@ -52,15 +64,23 @@ body {
     margin-bottom: 15px;
     width: 100%;
     transition: box-shadow 0.3s ease;
+  
 }
 
 
-#searchCourseButton {
-  height: 60px;
-  font-size: 18px;
-  font-family: 'AR One Sans', sans-serif;
+
+.search-bar button[type="submit"]{
+  height: 76px;
+  font-family: AR One Sans, sans-serif;
+
+  color: #4c70af;
+  cursor: pointer;
 }
 
+.search-bar button[type="submit"]:hover{
+  background-color: #edeff6;
+  cursor: pointer;
+}
 
 .welcome-page {
   display: flex;
@@ -186,4 +206,865 @@ body {
   justify-content: space-between; /* Optional: to space the buttons equally in the available space */
 }
 
+.calendar {
+display: flex;
+flex-direction: column;
+width: 427px;
+height: 352.11px;
+align-items: center;
+justify-content: center;
+gap: 8px;
+padding: 4px;
+position: relative;
+background-color: #ffffff;
+border: 1px solid;
+border-color: #000000;
+}
+.calendar .month-year-line {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 16px 32px;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+margin-top: -6.95px;
+}
+.calendar .img {
+position: relative;
+width: 24px;
+height: 24px;
+}
+.calendar .month-year {
+position: relative;
+flex: 1;
+margin-top: -1px;
+font-family: "Lato-SemiBold", Helvetica;
+font-weight: 600;
+color: var(--gray-3);
+font-size: 20px;
+text-align: center;
+letter-spacing: 0;
+line-height: normal;
+}
+.calendar .line {
+position: relative;
+width: 355px;
+height: 1px;
+object-fit: cover;
+}
+.calendar .day-date {
+flex-direction: column;
+align-items: flex-start;
+gap: 4px;
+margin-bottom: -6.95px;
+display: flex;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+}
+.calendar .day-line {
+align-items: center;
+justify-content: center;
+gap: 11px;
+padding: 8px 32px;
+display: flex;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+}
+.calendar .day {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 2px 8px;
+position: relative;
+flex: 1;
+flex-grow: 1;
+}
+.calendar .text-wrapper {
+position: relative;
+width: fit-content;
+margin-top: -1px;
+font-family: "Lato-Medium", Helvetica;
+font-weight: 500;
+color: #000000;
+font-size: 12px;
+letter-spacing: 0.36px;
+line-height: 12px;
+white-space: nowrap;
+}
+.calendar .date-line {
+align-items: flex-start;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+.calendar .date-number-line {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 4px 32px;
+position: relative;
+align-self: stretch;
+width: 100%;
+flex: 0 0 auto;
+}
+.calendar .date {
+height: 42px;
+align-items: center;
+justify-content: center;
+gap: 10px;
+padding: 10px;
+flex: 1;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+position: relative;
+}
+.calendar .div {
+position: relative;
+width: fit-content;
+margin-top: -1px;
+font-family: "Lato-Medium", Helvetica;
+font-weight: 500;
+color: #000000;
+font-size: 18px;
+text-align: center;
+letter-spacing: 0;
+line-height: 22px;
+white-space: nowrap;
+}
 
+
+
+/* dashboard */
+.dashboard-syllabus {
+  background-color: #edeff6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* 100% of the viewport height */
+}
+
+.dashboard-syllabus .div {
+  background-color: #edeff6;
+  overflow: hidden;
+  width: 1440px;
+  height: 750px;
+  position: relative;
+}
+
+.dashboard-syllabus .text-wrapper {
+  position: absolute;
+  top: 1080px;
+  left: 894px;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-2 {
+  position: absolute;
+  width: 297px;
+  top: 1074px;
+  left: 397px;
+  font-family: "Open Sans-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .search-bar-on {
+  position: absolute;
+  width: 554px;
+  height: 50px;
+  top: 37px;
+  left: 328px;
+}
+
+.dashboard-syllabus .overlap-group {
+  position: relative;
+  width: 552px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #0052b4;
+}
+
+.dashboard-syllabus .group {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 7px;
+  left: 20px;
+}
+
+.dashboard-syllabus .text-wrapper-3 {
+  width: 79px;
+  top: 14px;
+  left: 52px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .professor-avatar {
+  position: absolute;
+  width: 65px;
+  height: 61px;
+  top: 30px;
+  left: 1288px;
+}
+
+.dashboard-syllabus .overlap {
+  position: relative;
+  width: 63px;
+  height: 61px;
+  background-color: #596077;
+  border-radius: 31.5px/30.5px;
+}
+
+.dashboard-syllabus .text-wrapper-4 {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 25px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .notifications {
+  position: absolute;
+  width: 30px;
+  height: 37px;
+  top: 44px;
+  left: 1225px;
+}
+
+.dashboard-syllabus .overlap-2 {
+  position: relative;
+  width: 28px;
+  height: 37px;
+}
+
+.dashboard-syllabus .vector {
+  width: 25px;
+  height: 27px;
+  top: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.dashboard-syllabus .ellipse {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  top: 2px;
+  left: 9px;
+  background-color: #5a46aa;
+  border-radius: 9.5px;
+}
+
+.dashboard-syllabus .text-wrapper-5 {
+  position: absolute;
+  top: 0;
+  left: 13px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .create-new-button {
+  position: absolute;
+  width: 133px;
+  height: 49px;
+  top: 42px;
+  left: 1053px;
+}
+
+.dashboard-syllabus .overlap-3 {
+  position: absolute;
+  width: 1023px;
+  height: 334px;
+  top: 163px;
+  left: 328px;
+}
+
+.dashboard-syllabus .my-courses-dashboard {
+  position: absolute;
+  width: 1023px;
+  height: 334px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard-syllabus .overlap-group-wrapper {
+  width: 1049px;
+  height: 334px;
+}
+
+.dashboard-syllabus .overlap-group-2 {
+  position: relative;
+  width: 1023px;
+  height: 334px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.dashboard-syllabus .overlap-4 {
+  position: absolute;
+  width: 1023px;
+  height: 87px;
+  top: 1px;
+  left: 0;
+}
+
+.dashboard-syllabus .text-wrapper-6 {
+  position: absolute;
+  width: 138px;
+  top: 29px;
+  left: 45px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .line {
+  width: 1023px;
+  top: 86px;
+  left: 0;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.dashboard-syllabus .rectangle {
+  position: absolute;
+  width: 1023px;
+  height: 86px;
+  top: 0;
+  left: 0;
+  background-color: #5a46aa;
+}
+
+.dashboard-syllabus .text-wrapper-7 {
+  top: 32px;
+  left: 49px;
+  position: absolute;
+  width: 122px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-8 {
+  top: 31px;
+  left: 301px;
+  position: absolute;
+  width: 122px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-9 {
+  position: absolute;
+  width: 122px;
+  top: 30px;
+  left: 512px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .overlap-5 {
+  position: absolute;
+  width: 378px;
+  height: 28px;
+  top: 114px;
+  left: 45px;
+}
+
+.dashboard-syllabus .text-wrapper-10 {
+  position: absolute;
+  width: 378px;
+  top: 0;
+  left: 0;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-11 {
+  position: absolute;
+  width: 61px;
+  top: 3px;
+  left: 256px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-12 {
+  top: 113px;
+  position: absolute;
+  width: 162px;
+  left: 511px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-13 {
+  top: 195px;
+  position: absolute;
+  width: 162px;
+  left: 511px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-14 {
+  top: 274px;
+  position: absolute;
+  width: 162px;
+  left: 511px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .overlap-6 {
+  position: absolute;
+  width: 378px;
+  height: 26px;
+  top: 192px;
+  left: 45px;
+}
+
+.dashboard-syllabus .text-wrapper-15 {
+  position: absolute;
+  width: 61px;
+  top: 0;
+  left: 256px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-16 {
+  position: absolute;
+  width: 378px;
+  top: 1px;
+  left: 0;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-17 {
+  position: absolute;
+  width: 61px;
+  top: 274px;
+  left: 300px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .text-wrapper-18 {
+  position: absolute;
+  width: 238px;
+  top: 274px;
+  left: 44px;
+  font-family: "Open Sans-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .img {
+  width: 1023px;
+  top: 165px;
+  left: -1px;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.dashboard-syllabus .line-2 {
+  width: 1023px;
+  top: 248px;
+  left: -1px;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.dashboard-syllabus .group-2 {
+  position: absolute;
+  width: 120px;
+  height: 43px;
+  top: 107px;
+  left: 732px;
+}
+
+.dashboard-syllabus .group-3 {
+  position: absolute;
+  width: 120px;
+  height: 43px;
+  top: 188px;
+  left: 732px;
+}
+
+.dashboard-syllabus .group-4 {
+  position: absolute;
+  width: 120px;
+  height: 43px;
+  top: 269px;
+  left: 732px;
+}
+
+.dashboard-syllabus .group-5 {
+  position: absolute;
+  width: 120px;
+  height: 43px;
+  top: 107px;
+  left: 867px;
+}
+
+.dashboard-syllabus .group-6 {
+  position: absolute;
+  width: 120px;
+  height: 43px;
+  top: 188px;
+  left: 867px;
+}
+
+.dashboard-syllabus .group-7 {
+  position: absolute;
+  width: 120px;
+  height: 43px;
+  top: 269px;
+  left: 867px;
+}
+
+.dashboard-syllabus .overlap-7 {
+  position: absolute;
+  width: 290px;
+  height: 895px;
+  top: 0;
+  left: 0;
+  background-color: #5a46aa;
+}
+
+.dashboard-syllabus .overlap-8 {
+  position: absolute;
+  width: 130px;
+  height: 99px;
+  top: 416px;
+  left: 91px;
+}
+
+.dashboard-syllabus .record {
+  position: absolute;
+  width: 130px;
+  height: 99px;
+  top: 0;
+  left: 0;
+}
+
+.dashboard-syllabus .img-2 {
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  position: absolute;
+  left: 0;
+}
+
+.dashboard-syllabus .text-wrapper-19 {
+  position: absolute;
+  top: 0;
+  left: 38px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .text-wrapper-20 {
+  position: absolute;
+  top: 36px;
+  left: 63px;
+  font-family: "Roboto-Light", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .text-wrapper-21 {
+  top: 76px;
+  left: 63px;
+  font-family: "Roboto-Light", Helvetica;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 20px;
+  white-space: nowrap;
+  position: absolute;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .line-3 {
+  width: 47px;
+  top: 62px;
+  left: 63px;
+  position: absolute;
+  height: 1px;
+  object-fit: cover;
+}
+
+.dashboard-syllabus .home {
+  position: absolute;
+  width: 95px;
+  height: 25px;
+  top: 189px;
+  left: 90px;
+}
+
+.dashboard-syllabus .text-wrapper-22 {
+  position: absolute;
+  top: 0;
+  left: 39px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .home-icon {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  top: 4px;
+  left: 0;
+}
+
+.dashboard-syllabus .shape {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  top: 2px;
+  left: 1px;
+}
+
+.dashboard-syllabus .settings {
+  position: absolute;
+  width: 117px;
+  height: 27px;
+  top: 615px;
+  left: 89px;
+}
+
+.dashboard-syllabus .text-wrapper-23 {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .carbon-settings {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  left: 0;
+}
+
+.dashboard-syllabus .students {
+  position: absolute;
+  width: 124px;
+  height: 27px;
+  top: 264px;
+  left: 88px;
+}
+
+.dashboard-syllabus .text-wrapper-24 {
+  position: absolute;
+  top: 0;
+  left: 41px;
+  font-family: "Roboto-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.dashboard-syllabus .student {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 2px;
+  left: 0;
+}
+
+.dashboard-syllabus .classes {
+  position: absolute;
+  width: 114px;
+  height: 28px;
+  top: 342px;
+  left: 88px;
+}
+
+.dashboard-syllabus .healthicons-i {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 0;
+}
+
+.dashboard-syllabus .statistic {
+  position: absolute;
+  width: 104px;
+  height: 25px;
+  top: 538px;
+  left: 91px;
+}
+
+.dashboard-syllabus .logout {
+  position: absolute;
+  width: 111px;
+  height: 23px;
+  top: 700px;
+  left: 97px;
+}
+
+.dashboard-syllabus .vector-2 {
+  width: 23px;
+  height: 21px;
+  top: 1px;
+  position: absolute;
+  left: 0;
+}
+
+.dashboard-syllabus .syllabot-logo {
+  position: absolute;
+  width: 137px;
+  height: 41px;
+  top: 46px;
+  left: 77px;
+}
+
+.dashboard-syllabus .edudash-logo {
+  position: absolute;
+  width: 92px;
+  height: 35px;
+  top: 3px;
+  left: 47px;
+}
+
+.dashboard-syllabus .text-wrapper-25 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Jost-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.dashboard-syllabus .cast-for-education {
+  position: absolute;
+  width: 37px;
+  height: 41px;
+  top: 0;
+  left: 0;
+}
