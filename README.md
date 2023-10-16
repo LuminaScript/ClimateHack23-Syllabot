@@ -1,5 +1,5 @@
-# hackathon_climate_change
-This is a Hackathon Project (Team of 5)
+# ClimateHack23-Syllabot
+This is a Hackathon Project (Team of 5), winning 3-rd place. 
 
 Demo: https://www.youtube.com/watch?v=XzLyrrDagD8
 # AI-Powered Education Hub for Business and Climate Change
